@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.table-card {
+  background: white;
+  padding: 0px; /* Let DataTable handle its own padding/borders */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 1300px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Header Styling */
+.custom-table .p-datatable-thead > tr > th {
+  background-color: #ffffff !important;
+  color: #6b7280 !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Row Styling */
+.custom-table .p-datatable-tbody > tr > td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f9fafb;
+}
+
+/* The small chevron button next to TITLE */
+.custom-chevron-btn {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0 !important;
+  color: #9ca3af !important;
+}
+
+.custom-chevron-btn:hover {
+  background: #f3f4f6 !important;
+  color: #4b5563 !important;
+}
+
+/* Paginator styling to match the image */
+.p-paginator {
+  background-color: #ffffff !important;
+  border-top: 1px solid #f3f4f6 !important;
+  justify-content: flex-end !important;
+  padding: 12px !important;
+}
+
+.p-paginator-current {
+  margin-right: auto !important;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: #4f46e5;
+  color: white;
+  border-radius: 4px;
+}/* Align the entire paginator content */
+.custom-table .p-paginator {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Pushes everything to the right by default */
+    padding: 1rem !important;
+    background-color: #ffffff !important;
+    border-top: 1px solid #f3f4f6 !important;
+}
+
+/* Push the "Showing 1 to 12..." text to the far left */
+.custom-table .p-paginator-current {
+    margin-right: auto !important; /* This is the magic line that pushes the rest to the right */
+    font-size: 13px !important;
+    color: #6c757d !important;
+    font-weight: 400;
+}
+
+/* Styling for the page numbers and text buttons */
+.custom-table .p-paginator .p-link {
+    min-width: 34px !important;
+    height: 34px !important;
+    margin: 0 2px !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    color: #4b5563 !important;
+    transition: all 0.2s;
+}
+
+/* Active page number highlight (blue box) */
+.custom-table .p-paginator .p-highlight {
+    background: #4f46e5 !important; /* Indigo/Blue color */
+    color: #ffffff !important;
+    border-color: #4f46e5 !important;
+}
+
+/* Hover effects for buttons */
+.custom-table .p-paginator .p-link:not(.p-highlight):not(.p-disabled):hover {
+    background: #f9fafb !important;
+}
+
+/* Hide the standard small icons since we added text buttons */
+.custom-table .p-paginator-prev .p-paginator-icon,
+.custom-table .p-paginator-next .p-paginator-icon {
+    display: none !important;
+}
